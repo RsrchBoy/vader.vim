@@ -104,6 +104,7 @@ function! vader#run(bang, ...) range
     if a:bang
       redir => ver
       silent version
+      silent messages
       redir END
 
       call s:print_stderr(ver . "\n\n" . g:vader_report)
